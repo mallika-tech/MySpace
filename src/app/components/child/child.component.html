@@ -1,0 +1,15 @@
+<p>Parent Message</p>
+
+<!-- {{}} called as interpolation -->
+<h1>
+  {{ parentMessage }}
+</h1>
+
+
+<label for="item-input">Add a Surname:</label>
+<input type="text" id="item-input" #surname>
+<!-- the method wrote for to send the input values to parent component  -->
+<button type="button" (click)="sendName(surname.value)">Add to parent's list</button>
+<!-- rxjs  -->
+<p>RName: {{rName}} </p>
+

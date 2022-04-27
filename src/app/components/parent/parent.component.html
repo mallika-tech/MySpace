@@ -1,0 +1,11 @@
+<p>parent component</p>
+<!-- eventEmit comming from child ts where we initialize that name and the
+     method addName also similar to the method name of child ts like sendName -->
+<app-child (eventEmit)="addName($event)" [parentMessage]="item"  > </app-child>
+<h1 *ngFor="let name of surnames">
+    {{name}}
+</h1>
+
+ <!-- the data which parent get from the child it is sharing that data with child2 -->
+<app-child2 [sendSurname]="surnames"></app-child2>
+
